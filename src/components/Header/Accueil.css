@@ -22,3 +22,7 @@
     text-align: justify;
     margin: auto;
   }
+
+  p {
+    color: #fff;
+  }

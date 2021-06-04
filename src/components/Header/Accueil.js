@@ -10,7 +10,7 @@ const Accueil = ({element}) => {
                 <section className='welcome'>
                     <div ref={element}>
                         <img src={Logo} alt='logo' className='welcome--logo' />
-                        <p>Bienvenu sur CritikArt</p>
+                        <h1>Bienvenu sur CritikArt</h1>
                     </div>
                 </section>
                 <About />

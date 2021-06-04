@@ -1,15 +1,35 @@
 import React from 'react'
 import './Contact.css'
-import Logo from "../../assets/images/logo1.gif";
+import { Form } from "react-bootstrap";
+import { Button } from "react-bootstrap";
 
-const Contact = ({element}) => {
+
+const Contact = () => {
     return (
             <main>
                 <section className='welcome'>
-                    <div ref={element}>
-                        <img src={Logo} alt='logo' className='welcome--logo' />
-                        <p>Even if you scroll, i will stick with you</p>
-                    </div>
+                    <Form>
+                            <Form.Group controlId="exampleForm.ControlInput1" className="email">
+                                <Form.Control type="email" placeholder="Entrer votre email" />
+                                <Form.Text className="text-muted">
+                                   **Votre adresse mail est soumise à la loi RGPD**
+                                </Form.Text>
+                            </Form.Group>
+
+                            <Form.Group controlId="exampleForm.ControlTextarea1" className="textarea">
+                                <Form.Control 
+                                        as="textarea" 
+                                        rows={2} 
+                                        cols="80" 
+                                        placeholder="Ecrivez votre message ici" 
+                                        style={{ height: '200px' }} 
+                                        />
+                            </Form.Group>
+                            <br></br>
+                            <Button variant="danger" type="submit">
+                                Envoyer
+                            </Button>
+                    </Form>
                 </section>
             </main>
     )
