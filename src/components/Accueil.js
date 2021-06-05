@@ -1,6 +1,6 @@
 import React from 'react'
 import '../style/Accueil.css'
-import Logo from "../assets/images/logo1.gif";
+import Logo from "../assets/images/logo2.gif";
 import About from './About'
 
 const Accueil = ({element}) => {
@@ -10,7 +10,7 @@ const Accueil = ({element}) => {
                 <section className='welcome'>
                     <div ref={element}>
                         <img src={Logo} alt='logo' className='welcome--logo' />
-                        <h1>Bienvenu sur CritikArt</h1>
+                        <h1>Bienvenue sur CritikArt</h1>
                     </div>
                 </section>
                 <About />
