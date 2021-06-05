@@ -1,7 +1,7 @@
 import React from 'react';
-import Navbar from "./components/Header/Navbar"
-import Contact from './components/Header/Contact.js';
-import Accueil from './components/Header/Accueil.js';
+import Navbar from "./components/Navbar"
+import Contact from './components/Contact.js';
+import Accueil from './components/Accueil.js';
 import { Route } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 

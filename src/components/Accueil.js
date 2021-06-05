@@ -1,6 +1,6 @@
 import React from 'react'
-import './Accueil.css'
-import Logo from "../../assets/images/logo1.gif";
+import '../style/Accueil.css'
+import Logo from "../assets/images/logo1.gif";
 import About from './About'
 
 const Accueil = ({element}) => {
