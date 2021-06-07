@@ -10,10 +10,6 @@
     align-items: center;
     text-align: center;
   }
-  .welcome--logo {
-    width: 10rem;
-    border-radius: 20px;
-  }
   
   .w--about {
     padding: 2rem;
