@@ -1,22 +1,36 @@
 import React from 'react';
-import Navbar from "./components/Navbar"
 import Contact from './components/Contact.js';
 import Accueil from './components/Accueil.js';
-import { Route } from 'react-router-dom';
+import Footer from './components/Footer';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import Auth from './components/Auth';
+import Create from './components/Create';
+import Read from './components/Read';
+import ErrorPage from './components/ErrorPage';
+import './App.css';
+
+// Switch : Permet de ne pas afficher la totalité des pages en une
+// Route : Permet de naviguer entre les pages
+// Router : englobe les instances
 
 function App() {
+  
     return (
-    <div className="container-fluid">
-      <Navbar />
-      <Route exact path="/accueil" component={Accueil} />
-      <Route exact path="/contact" component={Contact} />
+        <Router className ="welcome">
+          
+          <Switch>
+              <Route exact  path="/" component={ Auth } />
+              <Route  path="/accueil" component={ Accueil } />
+              <Route  path="/contact" component={ Contact } />
+              <Route  path="/create" component={ Create } />
+              <Route  path="/read" component={ Read } />
+              <Route  component={ ErrorPage } />
 
+          </Switch>
 
-    <footer>
-      <p> Copyright © <span className="copy">Toute reproduction ou représentation, intégrale ou partielle, faite sans le consentement de l'auteur, serait illicite et constituerait une contrefaçon. </span></p>
-  </footer>
-    </div>
+          <Footer />
+        </Router>
   )
 }
 export default App

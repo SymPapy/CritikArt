@@ -21,7 +21,7 @@ const UpdateDelete = ({ item }) => {
 
 
     const updateItem = () => {
-        let film = firebase.database().ref("films").child(item.id);
+        let film = firebase.database().ref("films/films").child(item.id);
 
         if (titreUpdate !== null) {
             film.update({
@@ -37,7 +37,7 @@ const UpdateDelete = ({ item }) => {
     };
 
     const deleteItem = () => {
-        let film = firebase.database().ref("films").child(item.id);
+        let film = firebase.database().ref("films/films").child(item.id);
 
         film.remove();
     }

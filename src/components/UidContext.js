@@ -1,4 +1,6 @@
-import {createContext} from 'react';
+import React from 'react';
 
-export const UidContext = createContext(null);
+const UidContext = React.createContext(null);
+export default UidContext;
+
 

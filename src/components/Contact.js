@@ -2,11 +2,13 @@ import React from 'react'
 import '../style/Contact.css'
 import { Form } from "react-bootstrap";
 import { Button } from "react-bootstrap";
+import Navbar from './Navbar';
 
 
 const Contact = () => {
     return (
             <main>
+                <Navbar />
                 <section className='welcome'>
                     <Form>
                             <Form.Group controlId="exampleForm.ControlInput1" className="email">

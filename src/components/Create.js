@@ -1,6 +1,7 @@
-import React, { useState } from 'react';
+import React, { Fragment, useState } from 'react';
 import firebase from '../utils/firebaseConfig';
 // import { UidContext } from './UidContext';
+import Navbar from './Navbar';
 
 const Create = () => {
     const [affiche, setAffiche] = useState('');
@@ -13,7 +14,7 @@ const Create = () => {
     // const uid = useContext(UidContext);
 
     const createNewMovie = () => {
-        const moviesDB = firebase.database().ref("films")
+        const moviesDB = firebase.database().ref("films/films")
         const movie = {
         affiche,
         bande_annonce,
@@ -33,9 +34,9 @@ const Create = () => {
         setTitre('');
     }
 
-
-
     return (
+        <Fragment>
+            <Navbar />
         <div className = "create">
             <h4>Déposer un film</h4>
             <div className = "form">
@@ -61,9 +62,10 @@ const Create = () => {
                 type = "file"
                 id = "affiche"
                  />
-            <button onClick = {createNewMovie}>Envoi du nouveau film</button>
+            <button onClick = { createNewMovie }>Envoi du nouveau film</button>
             </div>
         </div>
+        </Fragment>
     );//on récupère ce qu'il ya dans l'évènement (e)->titre et on le passe dans setTitre
 };
 
