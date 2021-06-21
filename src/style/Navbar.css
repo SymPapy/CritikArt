@@ -74,7 +74,9 @@
   .welcome__cta-primary {
     text-decoration: none;
     background: #e74c3c;
-    color: #fff;
+    color: #fff !important;
+    cursor: pointer;
+    list-style: none;
     padding: 4px 3px;
     border: none;
     border-radius: 20px;

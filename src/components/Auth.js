@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import firebase from '../utils/firebaseConfig';
 import StyledFirebaseAuth from 'react-firebaseui/StyledFirebaseAuth';
-import Accueil from "./Accueil";
 import About from './About';
+import Accueil from "./Accueil";
 
 
 const Auth = () => {
@@ -31,19 +31,19 @@ useEffect(() => {
   return (
     <div className = "" style={{textAlign: 'center'}}>
       {isSignedIn ? ( //opérateur ternaire ? -> valeur si vrai : -> valeur si faux 
-        <Accueil />
-      ) : (
-        <div>
-          <h1 className="auth">Critikart authentification</h1>
-          <About />
-          <div className="login-page">
-          <StyledFirebaseAuth //Stylise tous les boutons
-            uiConfig = {uiConfig}
-            firebaseAuth = { firebase.auth() } 
-          />
-          </div>
-        </div>
-        )
+        <Accueil /> //props.history.push('/accueil') // Nous renvoie sur la page Accueil, si on passe en param-tre Props
+      ) : ( 
+            <div>
+              <h1 className="auth">Critikart authentification</h1>
+              <About />
+              <div className="login-page">
+              <StyledFirebaseAuth //Stylise tous les boutons
+                uiConfig = {uiConfig}
+                firebaseAuth = { firebase.auth() } 
+              />
+              </div>
+            </div>
+          )
       }
     </div>
   );

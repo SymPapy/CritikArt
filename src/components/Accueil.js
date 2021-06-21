@@ -8,13 +8,13 @@ const Accueil = ({element}) => {
         <main>
             <Navbar />
             <div>
-                    <section className='welcome'>
-                        <div ref={element}>
-                            <img src={Logo} alt='logo' className='welcome--logo' />
-                            <h1>Bienvenue sur CritikArt</h1>
-                        </div>
-                    </section>
-                </div>
+                <section className='welcome'>
+                    <div ref={element}>
+                        <img src={Logo} alt='logo' className='welcome--logo' />
+                        <h1>Bienvenue sur CritikArt</h1>
+                    </div>
+                </section>
+            </div>
         </main>
             
 

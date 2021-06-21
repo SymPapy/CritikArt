@@ -27,12 +27,6 @@ const Read = () => {
                     <ul>{filmList &&
                         filmList.map((item, index)=> (
                             <UpdateDelete item={item} key = {index} />
-                        // return <p>
-                        //     <h5>{item.id}</h5>
-                        // <h4>Titre du film :</h4> {item.titre} 
-                        // <h4>Synopsis :</h4> {item.description}
-                        // <h3>affiche</h3> {item.affiche} 
-                        // <h4>Date de sortie :</h4> {item.date_de_sortie}</p>
                         ))
                         }
                         </ul>
@@ -42,8 +36,3 @@ const Read = () => {
 };
 
 export default Read;
-
-
-                  //  filmList &&
-                 //filmList.map((item, index) => {
-                  //  <DeleteUpdate item={item} key={index} />

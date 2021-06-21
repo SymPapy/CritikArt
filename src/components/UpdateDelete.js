@@ -1,17 +1,7 @@
 import React, { useState } from 'react';
 import firebase from '../utils/firebaseConfig';
-// import { UidContext } from './UidContext';
-
-// const uid = useContext(UidContext);
-
-// const userCheck = () => {
-//     if (item.uid === uid) {
-//         return true;
-//     } else {
-//         return false;
-//     }
-// }
-// userCheck();
+import '../style/read.scss';
+// import { FirebaseContext } from '../utils/index';
 
 const UpdateDelete = ({ item }) => {
     const [update, setUpdate] = useState(false);
@@ -51,13 +41,12 @@ const UpdateDelete = ({ item }) => {
                     <p>"{item.titre}"</p>
                     <h6>Synopsis -- {item.description}</h6>
                     <h4>date de sortie : {item.date_de_sortie}</h4>
-
-                    {/* {userCheck() && (
+                    {(
                         <div className="buttons-container">
-                            <button onClick={() => setUpdate(!update)}>Update</button>
-                            <button onClick={deleteItem}>Delete</button>
+                            <button style={{borderRadius: "5px" }}  onClick={() => setUpdate(!update)}>Mettre à jour</button>
+                            <button style={{borderRadius: "5px" }}  onClick={deleteItem}>Supprimer</button>
                         </div>
-                    )} */}
+                    )}
                 </div>
             )}
 
@@ -72,7 +61,7 @@ const UpdateDelete = ({ item }) => {
                         defaultValue={item.titre}
                         onChange={(e) => setTitreUpdate(e.target.value)}
                     />
-                    <button onClick={updateItem}>Valider Update</button>
+                    <button style={{borderRadius: "5px" }} onClick={updateItem}>Valider Update</button>
                 </div>
 
             }
