@@ -1,7 +1,9 @@
 import React, { useState } from "react";
-import emailjs from 'emailjs-com';
+import emailjs from "emailjs-com";
 import './ContactUs.css';
 import Navbar from "../Navbar/Navbar";
+import { init } from 'emailjs-com';
+init( "user_HUwFmUTz7JjKVJeEalFoq" );
 
 const ContactUs = () => {
   const [name, setName] = useState("");
