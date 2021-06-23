@@ -52,7 +52,7 @@ $color-4: #333;
         display: flex;
         flex-wrap: wrap;
         width: 100%;
-        align-items: center;
+        align-items: flex-start;
 
         li {
           background: $color-2;

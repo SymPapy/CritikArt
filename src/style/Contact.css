@@ -32,7 +32,9 @@
   }
   
   .date {
-    margin-right: 6%;
+    color: #fff;
+    padding-left: 300px;
+    padding-right: 300px;
   }
 
   h2 .addFilms {

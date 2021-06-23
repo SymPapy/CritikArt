@@ -2,41 +2,51 @@ import React, { Fragment, useState } from 'react';
 import firebase from '../../utils/firebaseConfig';
 // import { UidContext } from './UidContext';
 import Navbar from '../Navbar/Navbar';
-import { Form } from "react-bootstrap";
+import { Form, Row, Col } from "react-bootstrap";
 import { Button } from "react-bootstrap";
+import ReactStars from 'react-rating-stars-component';
 import '../../style/Contact.css';
 
 const Create = () => {
+
+    
     const [affiche, setAffiche] = useState('');
     const [bande_annonce, setBande_annonce] = useState('');
     const [date_ajout, setAjout] = useState('');
     const [date_de_sortie, setSortie] = useState('');
     const [description, setDescription] = useState('');
     const [titre, setTitre] = useState('');
-
+    const [rate, setRate] = useState('');
+    
     // const uid = useContext(UidContext);
-
+    
     const createNewMovie = () => {
         const moviesDB = firebase.database().ref("films/films")
         const movie = {
-        affiche,
-        bande_annonce,
-        date_ajout,
-        date_de_sortie,
-        description,
-        titre
+            affiche,
+            bande_annonce,
+            date_ajout,
+            date_de_sortie,
+            description,
+            titre,
+            rate
         };
-
+        console.log("movie", movie);
+        
         moviesDB.push(movie);
-
+        
         setAffiche('');
         setBande_annonce('');
         setAjout('');
         setSortie('');
         setDescription('');
         setTitre('');
+        setRate('');
     }
-
+    const ratingChanged = (newRating) => {
+        console.log(newRating)
+    };
+    
     return (
         <Fragment>
             <Navbar />
@@ -56,6 +66,13 @@ const Create = () => {
                         value = {titre}
                         onChange = {(e) => setTitre(e.target.value)} />
                     </Form.Group>
+                    <ReactStars 
+                        count= {5}
+                        onChange= {(newRating) => { setRate(newRating) }}
+                        size= {24}
+                        activeColor="#ffd700"
+                        value= {rate}
+                    />
                     <br></br>
                     <Form.Group controlId="exampleForm.ControlTextarea1" className="textarea">
                         <Form.Control 
@@ -69,15 +86,27 @@ const Create = () => {
                             />
                 </Form.Group>
                 <br></br>
-                <label for="sortie">Date de sortie : </label>
-                    <input
-                    className="date"
-                    type = "date"
-                    id = "sortie"
-                    value = {date_de_sortie}
-                    onChange = {(e) => setSortie(e.target.value)} 
-                    />
-                <br></br><br></br>
+                <Form>
+                    <Row>
+                        <Col>
+                        <Form.Control
+                            placeholder = "UrL Affiche du film"
+                            value = {affiche}
+                            onChange = {(e) => setAffiche(e.target.value)}
+                        />
+                        </Col>
+                        <Col>
+                        <Form.Control 
+                            className=""
+                            required
+                            type="date"
+                            value = {date_de_sortie}
+                            onChange = {(e) => setSortie(e.target.value)}
+                        />
+                        </Col>
+                    </Row>
+                </Form>
+                <br></br>
                 <Button onClick = { createNewMovie } 
                         variant="danger"
                         className='btn'>
