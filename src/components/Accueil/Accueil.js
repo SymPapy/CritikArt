@@ -1,7 +1,7 @@
 import React from 'react'
-import '../style/Accueil.css'
-import Logo from "../assets/images/logo2.gif";
-import Navbar from './Navbar';
+import './Accueil.css'
+import Logo from "../../assets/images/logo2.gif";
+import Navbar from '../Navbar/Navbar';
 
 const Accueil = ({element}) => {
     return (

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import firebase from '../utils/firebaseConfig';
-import '../style/read.scss';
+import firebase from '../../utils/firebaseConfig';
+import '../../style/read.scss';
 // import { FirebaseContext } from '../utils/index';
 
 const UpdateDelete = ({ item }) => {

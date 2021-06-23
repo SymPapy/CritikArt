@@ -1,10 +1,10 @@
 import React, { Fragment, useState } from 'react';
-import firebase from '../utils/firebaseConfig';
+import firebase from '../../utils/firebaseConfig';
 // import { UidContext } from './UidContext';
-import Navbar from './Navbar';
+import Navbar from '../Navbar/Navbar';
 import { Form } from "react-bootstrap";
 import { Button } from "react-bootstrap";
-import '../style/Contact.css';
+import '../../style/Contact.css';
 
 const Create = () => {
     const [affiche, setAffiche] = useState('');
@@ -40,7 +40,7 @@ const Create = () => {
     return (
         <Fragment>
             <Navbar />
-            <h2>Déposer un film</h2>
+            <h2 className="addFilms">Déposer un film</h2>
             
         <div className="container-fluid">
             <Form className = "welcome-create">
@@ -81,7 +81,7 @@ const Create = () => {
                 <Button onClick = { createNewMovie } 
                         variant="danger"
                         className='btn'>
-                    Envoyer du nouveau film
+                    Envoye du nouveau film
                 </Button>
             </Form>
             <br></br>

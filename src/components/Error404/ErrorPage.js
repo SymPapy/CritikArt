@@ -1,5 +1,5 @@
 import React from 'react'
-import Logo from "../assets/images/logo1.gif"
+import Logo from "../../assets/images/logo1.gif"
 
 const ErrorPage = () => {
     return (

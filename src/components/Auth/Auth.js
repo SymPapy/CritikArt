@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
-import firebase from '../utils/firebaseConfig';
+import firebase from '../../utils/firebaseConfig';
 import StyledFirebaseAuth from 'react-firebaseui/StyledFirebaseAuth';
 import About from './About';
-import Accueil from "./Accueil";
+import Accueil from "../Accueil/Accueil";
 
 
 const Auth = () => {
