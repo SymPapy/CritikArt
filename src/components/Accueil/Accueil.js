@@ -1,12 +1,12 @@
 import React from 'react'
 import './Accueil.css'
 import Logo from "../../assets/images/logo2.gif";
-import Navbar from '../Navbar/Navbar';
+import NavBar from '../Navbar/Navbar';
 
 const Accueil = ({element}) => {
     return (
         <main>
-            <Navbar />
+            <NavBar />
             <div>
                 <section className='welcome'>
                     <div ref={element}>

@@ -60,7 +60,7 @@ const Create = () => {
                 Cependant, et il en va de soi, il est interdit ❌ d'y inscrir des films à caractère sexuel ! Un contrôle régulier est mis en place /!\
             </Form.Text>
             <br></br><br></br>
-                <Form.Group controlId="exampleForm.ControlInput1" className="titleFilm">
+                <Form.Group controlId="exampleForm.ControlInput1" className="">
                     <Form.Control
                         placeholder = "Titre du film"
                         value = {titre}
